@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Review | Nilgiri Connect</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/dashboard/style.css">
+  <!-- endinject -->
+  <link rel="icon" href="images/nctitle.png" type="image/png">
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+
+<body onload="oninit()">
+  <div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="navbar-brand-wrapper d-flex justify-content-center">
+        <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
+          <a class="navbar-brand brand-logo" href="index.html"><img
+              style="height: 2.8em; width: 10em; padding-top: 0.4em;" src="images/nclogo.png" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/nctitle.png" alt="logo" /></a>
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-sort-variant"></span>
+          </button>
+        </div>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <ul class="navbar-nav mr-lg-4 w-100" style="visibility: hidden;">
+          <li class="nav-item nav-search d-none d-lg-block w-100">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="search">
+                  <i class="mdi mdi-magnify"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Search now" aria-label="search"
+                aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown mr-1">
+            <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
+              id="messageDropdown" href="#" data-toggle="dropdown">
+              <i class="mdi mdi-message-text mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="messageDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Enquiries</p>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <img src="images/faces/face4.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="item-content flex-grow">
+                  <h6 class="ellipsis font-weight-normal">David Grey
+                  </h6>
+                  <p class="font-weight-light small-text text-muted mb-0">
+                    The meeting is cancelled
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <img src="images/faces/face2.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="item-content flex-grow">
+                  <h6 class="ellipsis font-weight-normal">Tim Cook
+                  </h6>
+                  <p class="font-weight-light small-text text-muted mb-0">
+                    New product launch
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="item-content flex-grow">
+                  <h6 class="ellipsis font-weight-normal"> Johnson
+                  </h6>
+                  <p class="font-weight-light small-text text-muted mb-0">
+                    Upcoming board meeting
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown mr-4">
+            <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center notification-dropdown"
+              id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="mdi mdi-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <div class="item-icon bg-success">
+                    <i class="mdi mdi-information mx-0"></i>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h6 class="font-weight-normal">Application Error</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <div class="item-icon bg-warning">
+                    <i class="mdi mdi-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h6 class="font-weight-normal">Settings</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <div class="item-icon bg-info">
+                    <i class="mdi mdi-account-box mx-0"></i>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h6 class="font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="images/faces/face5.jpg" alt="profile" />
+              <span class="nav-profile-name" id="userName">Louis Barnett</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="mdi mdi-settings text-primary"></i>
+                Settings
+              </a>
+              <a class="dropdown-item">
+                <i class="mdi mdi-logout text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+          data-toggle="offcanvas">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:../../partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="javascript:dashboardClick();">
+              <i class="mdi mdi-home menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="mdi mdi-account-outline menu-icon"></i>
+              <span class="menu-title">Profile</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Settings</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Logout</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/forms/basic_elements.html">
+              <i class="mdi mdi-houzz menu-icon"></i>
+              <span class="menu-title">Companies</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/charts/chartjs.html">
+              <i class="mdi mdi-store menu-icon"></i>
+              <span class="menu-title">Stores & Services</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/tables/basic-table.html">
+              <i class="mdi mdi-account-star menu-icon"></i>
+              <span class="menu-title">My Reviews & Enquiries </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/icons/mdi.html">
+              <i class="mdi mdi-file-image menu-icon"></i>
+              <span class="menu-title">Advertisments</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="d-flex justify-content-between flex-wrap">
+                <div class="d-flex align-items-end flex-wrap">
+                  <div class="mr-md-3 mr-xl-5">
+                    <h2>Company Details</h2>
+                    <p class="mb-md-0">Review Company information</p>
+                  </div>
+                  <div class="d-flex">
+                    <i class="mdi mdi-home text-muted hover-cursor"></i>
+                    <p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;Dashboard&nbsp;/&nbsp;</p>
+                    <p class="text-primary mb-0 hover-cursor">Review</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="btn-group" role="group" style="width: 32em;" aria-label="Basic example">
+              <button type="button" id="one" class="btn btn-primary">
+                <i class="mdi mdi-houzz"></i>
+              </button>
+              <button type="button" id="two" class="btn btn-outline-secondary">
+                <i class="mdi  mdi-store"></i>
+              </button>
+              <button type="button" id="three" class="btn btn-outline-secondary">
+                <i class="mdi mdi-contact-mail"></i>
+              </button>
+              <button type="button" id="four" class="btn btn-outline-secondary">
+                <i class="mdi mdi-calendar"></i>
+              </button>
+              <button type="button" id="five" class="btn btn-outline-secondary">
+                <i class="mdi mdi-file-find"></i>
+              </button>
+            </div>
+            <div class="col-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title"></h4>
+                  <form class="form-sample" id="page1">
+                    <p class="card-description">
+                      Company Details
+                    </p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Company Name</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="cname" placeholder="Name of your company"
+                              disabled />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">City</label>
+                          <div class="col-sm-9">
+                            <input type="text" id="ccity" class="form-control" placeholder="City of your company"
+                              disabled />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label for="exampleInputMobile" class="col-sm-3 col-form-label">Mobile</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="cmobile" placeholder="Mobile number" disabled>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label for="exampleInputPhone" class="col-sm-3 col-form-label">Phone</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="cphone" disabled placeholder="Telephone Number">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="card-description">
+                      Managed By
+                    </p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label for="exampleInputMobile" class="col-sm-3 col-form-label">First Name</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="cfname" placeholder="First Name" disabled>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label for="exampleInputMobile" class="col-sm-3 col-form-label">Last Name</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="clname" placeholder="Last Name" disabled>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" onclick="skipToService()" class="btn btn-outline-danger btn-fw">Next
+                      >></button>
+                  </form>
+
+                  <form class="form-sample" id="page2" style="display: none;">
+                    <p class="card-description">
+                      Service Information
+                    </p>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Name of your Service/Store</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" placeholder="Name of your service" id="sname"
+                              disabled />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="card-description">
+                      Address & Logo
+                    </p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Building</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" placeholder="1247 DE Complex" id="sbuilding"
+                              disabled />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label for="exampleInputMobile" class="col-sm-3 col-form-label">Street</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="sstreet" placeholder="Street Name" disabled>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label for="exampleInputPhone" class="col-sm-3 col-form-label">Landmark</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="slandmark" disabled
+                              placeholder="A landmark to easily identify the store/service">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label for="exampleInputMobile" class="col-sm-3 col-form-label">Area</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="sarea" disabled placeholder="Service Area">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label for="exampleInputMobile" class="col-sm-3 col-form-label">City</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="scity" disabled placeholder="Service City">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label for="exampleInputMobile" class="col-sm-3 col-form-label">Pincode</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="spincode" placeholder="Pincode" disabled>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label for="exampleInputMobile" class="col-sm-3 col-form-label">State</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="sstate" placeholder="Tamil Nadu" disabled>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label for="exampleInputMobile" class="col-sm-3 col-form-label">Country</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="scountry" placeholder="India" disabled>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="form-group">
+                      <label>Upload logo/picture:</label>
+                      <input type="file" name="img[]" class="file-upload-default">
+                      <div class="input-group col-xs-12">
+                        <input type="text" class="form-control file-upload-info" disabled
+                          placeholder="Upload your logo or the picture of your store">
+                        <span class="input-group-append">
+                          <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                        </span>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary mr-2" type="button" onclick="goBackToCompany()">
+                      << Prev</button>
+                        <button onclick="continueToContact()" type="button" class="btn btn-outline-danger btn-fw">Next
+                          >></button>
+                  </form>
+
+                  <form class="form-sample" id="page3" style="display: none;">
+                    <p class="card-description">
+                      Contact Information & Social
+                    </p>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Contact Person</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="conPerson"
+                              placeholder="Name of the person managing the service" disabled />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label for="exampleInputMobile" class="col-sm-3 col-form-label">Mobile</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="conMobile" placeholder="Mobile number" disabled>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label for="exampleInputPhone" class="col-sm-3 col-form-label">Phone</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="conPhone" disabled
+                              placeholder="Telephone Number">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label for="exampleInputMobile" class="col-sm-3 col-form-label">Toll Free Number</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="conTollfree" disabled
+                              placeholder="Do you have a tollfree number?">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label for="exampleInputMobile" class="col-sm-3 col-form-label">Fax Number</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="conFax" disabled
+                              placeholder="Do you have a fax number?">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <div class="input-group">
+                            <input type="text" class="form-control" id="conWebsite" disabled placeholder="Your Website"
+                              aria-label="Recipient's username">
+                            <div class="input-group-append">
+                              <button class="btn btn-sm btn-youtube" type="button">
+                                <i class="mdi mdi-google-chrome"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <div class="input-group">
+                            <input type="text" class="form-control" id="conEmail" disabled placeholder="Your Email"
+                              aria-label="Recipient's username">
+                            <div class="input-group-append">
+                              <button class="btn btn-sm btn-google" type="button">
+                                <i class="mdi mdi-email-open"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <div class="input-group">
+                            <input type="text" class="form-control" id="conFacebook" disabled
+                              placeholder="Your Facebook Page" aria-label="Recipient's username">
+                            <div class="input-group-append">
+                              <button class="btn btn-sm btn-facebook" type="button">
+                                <i class="mdi mdi-facebook"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <div class="input-group">
+                            <input type="text" class="form-control" id="conInstagram" disabled
+                              placeholder="Your Instagram Page" aria-label="Recipient's username">
+                            <div class="input-group-append">
+                              <button class="btn btn-sm btn-instagram" type="button">
+                                <i class="mdi mdi-instagram"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <div class="input-group">
+                            <input type="text" class="form-control" id="conTwitter" disabled
+                              placeholder="Your twitter handle" aria-label="Recipient's username">
+                            <div class="input-group-append">
+                              <button class="btn btn-sm btn-twitter" type="button">
+                                <i class="mdi mdi-twitter"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <div class="input-group">
+                            <input type="text" class="form-control" id="conYoutube" disabled
+                              placeholder="Your youtube handle" aria-label="Recipient's username">
+                            <div class="input-group-append">
+                              <button class="btn btn-sm btn-youtube" type="button">
+                                <i class="mdi mdi-youtube"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" onclick="goBackToService()" class="btn btn-primary mr-2">
+                      << Prev</button>
+                        <button type="button" onclick="nextToSchedule()" class="btn btn-outline-danger btn-fw">Next
+                          >></button>
+                  </form>
+                  <form class="form-sample" id="page4" style="display: none;">
+                    <p class="card-description">
+                      Schedule & Payment Information
+                    </p>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="exampleInputUsername1">Monday Start Time</label>
+                          <input type="time" class="form-control" id="monBeg" name="appt">
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="exampleInputUsername1">Monday End Time</label>
+                          <input type="time" class="form-control" id="monEnd" name="appt">
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="checkbox" id="mon" disabled onclick="holidayCheckEvent(this)"
+                              class="form-check-input">
+                            Holiday
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="exampleInputUsername1">Tuesday Start Time</label>
+                          <input type="time" class="form-control" id="tueBeg" name="appt">
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="exampleInputUsername1">Tuesday End Time</label>
+                          <input type="time" class="form-control" id="tueEnd" name="appt">
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="checkbox" id="tue" disabled class="form-check-input"
+                              onclick="holidayCheckEvent(this)">
+                            Holiday
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="exampleInputUsername1">Wednesday Start Time</label>
+                          <input type="time" class="form-control" id="wedBeg" name="appt">
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="exampleInputUsername1">Wednesday End Time</label>
+                          <input type="time" class="form-control" id="wedEnd" name="appt">
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="checkbox" id="wed" disabled class="form-check-input"
+                              onclick="holidayCheckEvent(this)">
+                            Holiday
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="exampleInputUsername1">Thursday Start Time</label>
+                          <input type="time" class="form-control" id="thurBeg" name="appt">
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="exampleInputUsername1">Thursday End Time</label>
+                          <input type="time" class="form-control" id="thurEnd" name="appt">
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="checkbox" disabled class="form-check-input" id="thur"
+                              onclick="holidayCheckEvent(this)">
+                            Holiday
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="exampleInputUsername1">Friday Start Time</label>
+                          <input type="time" class="form-control" id="friBeg" name="appt">
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="exampleInputUsername1">Friday End Time</label>
+                          <input type="time" class="form-control" id="friEnd" name="appt">
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="checkbox" disabled class="form-check-input" id="fri"
+                              onclick="holidayCheckEvent(this)">
+                            Holiday
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="exampleInputUsername1">Saturday Start Time</label>
+                          <input type="time" class="form-control" id="satBeg" name="appt">
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="exampleInputUsername1">Saturday End Time</label>
+                          <input type="time" class="form-control" id="satEnd" name="appt">
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="checkbox" disabled class="form-check-input" id="sat"
+                              onclick="holidayCheckEvent(this)">
+                            Holiday
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="exampleInputUsername1">Sunday Start Time</label>
+                          <input type="time" class="form-control" id="sunBeg" name="appt">
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="exampleInputUsername1">Sunday End Time</label>
+                          <input type="time" class="form-control" id="sunEnd" name="appt">
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="checkbox" disabled sclass="form-check-input" id="sun"
+                              onclick="holidayCheckEvent(this)">
+                            Holiday
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="card-description">
+                      Accepted Payment Mediums
+                    </p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input disabled id="cash" type="checkbox" class="form-check-input">
+                              Cash
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input disabled type="checkbox" id="digi" class="form-check-input">
+                              Digital(Paytm, GPay, PhonePe., etc)
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input disabled type="checkbox" id="card" class="form-check-input">
+                              Card(Visa, Mastercard, Rupay., etc)
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button onclick="backToSocial()" type="button" class="btn btn-primary mr-2">
+                      << Prev</button>
+                        <button type="button" onclick="nextToKeywords()" class="btn btn-outline-danger btn-fw">
+                          Next >></button>
+
+                  </form>
+                  <form class="form-sample" id="page5" style="display: none;">
+                    <p class="card-description">
+                      Keywords/Services that you offer. You can enter name of things you sell or service you offer. For
+                      example plumbing, plumber, cake, banana, etc.,
+                    </p>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="exampleTextarea1">Keywords</label>
+                          <textarea class="form-control" id="keywordsArea" disabled rows="4"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" onclick="backToSchedule()" class="btn btn-outline-danger btn-fw">
+                      << Prev</button>
+                        <button type="button"  onclick="approveService()" class="btn btn-success">Approve</button>
+                        <button type="button" onclick="rejectService()" class="btn btn-danger">Reject</button>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="alertPop" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3>Please enter your comment</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <textarea class="form-control" id="commentsArea"></textarea>
+                  </div>
+                  <div class="modal-footer">
+                    <button onclick="approvalConfirm()" type="button" class="btn btn-primary btn-icon-text">
+                      <i class="mdi mdi-file-check btn-icon-prepend"></i>
+                      Submit
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="modal fade" id="alertPop2" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3>Alert!</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <h4 id="alertText2"></h4>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 Wildsprings.
+              All rights reserved.</span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="vendors/base/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/registerReview_controller.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/file-upload.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
